@@ -1,0 +1,42 @@
+body{
+    background-image: url(/img/u88lfn8yyzpd1.webp);
+    background-position: center 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.carousel{
+    width: 80%;
+    max-width: 400px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+}
+.carousel-track{
+    display: flex;
+    animation: auto-scroll 15s infinite linear;
+}
+.carousel-track img{
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+@keyframes auto-scroll{
+    0% {transform: translateX(0);}
+    16% {transform: translateX(-110%);}
+    32% {transform: translateX(-220%);}
+    48% {transform: translateX(-330%);}
+    64% {transform: translateX(-440%);}
+    80% {transform: translateX(-550%);}
+    96% {transform: translateX(-660%);}
+    0% {transform: translateX(0%);}
+}
+.carousel:hover .carousel-track{
+    animation-play-state: paused;
+    cursor: grab;
+    transform: translateX(-100%);
+    transition: transform 0.2 ease;
+}
